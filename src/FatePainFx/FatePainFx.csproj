@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <TargetFramework>netstandard2.1</TargetFramework>
+  <LangVersion>latest</LangVersion>
+  <AssemblyName>FatePainFx</AssemblyName>
+  <Version>0.1.0</Version>
+  <Authors>MikhailKillsZombies</Authors>
+  <OutputPath>bin/$(Configuration)/</OutputPath>
+  <DefaultItemExcludes>$(DefaultItemExcludes);bin/**;obj/**</DefaultItemExcludes>
+  <GameManaged>D:/AI Projects/Modding/FATE Reawakened/FATE Testing/instances/host/game/FateReawakened_Data/Managed</GameManaged>
+  <LoaderCore>D:/AI Projects/Modding/FATE Reawakened/FATE Shared Workspace/tools/bepinex/BepInEx/core</LoaderCore>
+ </PropertyGroup>
+ <ItemGroup>
+  <Reference Include="BepInEx"><HintPath>$(LoaderCore)/BepInEx.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="0Harmony"><HintPath>$(LoaderCore)/0Harmony.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="Assembly-CSharp"><HintPath>$(GameManaged)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="UnityEngine"><HintPath>$(GameManaged)/UnityEngine.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManaged)/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(GameManaged)/UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="UnityEngine.UIModule"><HintPath>$(GameManaged)/UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+  <Reference Include="UnityEngine.UI"><HintPath>$(GameManaged)/UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+ </ItemGroup>
+</Project>
